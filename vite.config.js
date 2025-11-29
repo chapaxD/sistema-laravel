@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import vuetify from 'vite-plugin-vuetify';
 
 export default defineConfig({
+    base: process.env.NODE_ENV === 'production' ? '/inf513/grupo08sa/sistema-laravel/' : '/',
     plugins: [
         laravel({
             input: ['resources/js/app.js'],
